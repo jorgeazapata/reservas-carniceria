@@ -1,26 +1,63 @@
+<!DOCTYPE html>
 <html>
- <head>
- 	<title>TURNOS CARNICERIA SURTIMAX FREDONIA</title>
- 	<meta charset="utf-8">
- 	<link href="css/main.css" rel="stylesheet" />
- </head>
- <body>
-    <br>
- 	<h2>¡BIENVIDO AL SISTEMA DE ASIGNACION DE TURNOS DE LA CARNICERIA SURTIMAX FREDONIA!</h2>
-    <br><br><br>
-    <form action="" method="get" class="form-example">
-        <div class="form-example">
-            <label for="name">Ingresa tu nombre</label>
-            <input type="name" name="name" id="name"required>
-        </div>
-        <div class="form-example">
-            <label for="name">Ingresa tu contraseña</label>
-            <input type="password" name="password" id="password"required>
-        </div>
-        <h5>Regístrate</h5>
-        <div class="form-example">
-            <input type="submit" value="¡INGRESAR!">
-        </div>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/homero.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+	<title>separar numero</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="numerou" id="numerou" minlength="7" maxlength="7" placeholder="Ingresa tu un número de 7 cifras" size="20">
+        <button type="button" onclick="mostrarresultado()">Enviar</button>
     </form>
- </body>
+<script type="text/javascript">
+	
+	function enviar() {
+		var numerou = document.getElementById("numerou").value;
+		alert(numerou);
+		var numerou = parseInt(numerou)
+		console.log
+	}
+
+
+
+	function mostrarresultado(){
+
+var idnumerou = document.getElementById('numerou').value;
+var idnumerou =parseInt(idnumerou)
+var numero = idnumerou
+var millon = numero /1000000
+var millon = parseInt(millon)
+var cenmil = (numero -(millon * 1000000)) /100000
+var cenmil = parseInt(cenmil)
+var decmil = ((numero -(millon * 1000000))-(cenmil*100000))/10000
+var decmil = parseInt(decmil)
+var unimil = (((numero -(millon * 1000000))-(cenmil*100000))-(decmil*10000))/1000
+var decmil = parseInt(decmil)
+var unimil = (((numero -(millon * 1000000))-(cenmil*100000))-(decmil*10000))/1000
+var unimil = parseInt(unimil)
+var centenas =((((numero -(millon * 1000000))-(cenmil*100000))-(decmil*10000))-(unimil*1000))/100
+var centenas = parseInt(centenas)
+var decenas = (((((numero -(millon * 1000000)) -(cenmil * 100000)) - (decmil * 10000)) - (unimil * 1000)) - (centenas * 100)) /10
+var decenas = parseInt(decenas)
+var unidades = ((((((numero - ( millon * 1000000)) - (cenmil * 100000)) - (decmil * 10000)) - (unimil * 1000)) - (centenas * 100)) - (decenas * 10)) /1
+var unidades = parseInt(unidades)
+
+
+console.log("los millones son " + millon)
+console.log("las centenas de mil son " + cenmil)
+console.log("las decenas de mil son " + decmil)
+console.log("las unidades de mil son " + unimil)
+console.log("las centenas son " + centenas)
+console.log("las decenas son " + decenas)
+console.log("las unidades son " +unidades)
+
+const resultado = [millon, cenmil, decmil, unimil, centenas, decenas, unidades]
+alert(resultado)
+	}
+</script>
+</body>
 </html>
